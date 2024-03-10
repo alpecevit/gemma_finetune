@@ -60,3 +60,30 @@ For all other values of n, it recursively calls itself with n-1 and multiplies t
 The time complexity of this algorithm is O(n), where n is the input number.
 The space complexity is O(1), as we only need to store the current and previous factorials.
 ```
+
+## Example Output From Base Model
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+
+print(factorial(5))
+```
+
+**Output:**
+
+```python
+120
+```
+
+**Explanation:**
+
+* The `factorial()` function takes a single integer argument, `n`.
+* It uses recursion to calculate the factorial of `n`.
+* If `n` is 0, it returns 1 (the factorial of 0 is defined as 1).
+* Otherwise, it returns `n` multiplied by the factorial of `n-1`.
+* The function continues this recursive process until `n` reaches 0, at which point it starts returning the results of previous recursive calls.
+* The `print()` statement calls the `factorial()` function with the argument `5`, which triggers the recursive calculation and prints the result.
