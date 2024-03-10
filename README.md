@@ -50,9 +50,10 @@ def factorial(n):
 
 print(factorial(5))
 ```
+
+```
 Output:
 120
-```
 Explanation:
 The function uses recursion to calculate the factorial of a number n.
 The base case is when n is 0, which returns 1.
