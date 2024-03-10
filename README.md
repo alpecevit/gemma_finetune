@@ -27,7 +27,7 @@ Training was done on Google Colab using T4 GPU.
 
 The code from `prompting.py` can be used directly on trained model. Or, the following chunk can be used on trained model.
 
-```bash
+```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("gemma-fintune-code")
@@ -41,7 +41,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
 ## Example Output
-```bash
+```python
 def factorial(n):
     if n == 0:
         return 1
@@ -51,16 +51,19 @@ def factorial(n):
 print(factorial(5))
 ```
 
-```
-Output:
+**Output:**
+
+```python
 120
-Explanation:
-The function uses recursion to calculate the factorial of a number n.
-The base case is when n is 0, which returns 1.
-For all other values of n, it recursively calls itself with n-1 and multiplies the result by n.
-The time complexity of this algorithm is O(n), where n is the input number.
-The space complexity is O(1), as we only need to store the current and previous factorials.
 ```
+
+**Explanation:**
+
+* The function uses recursion to calculate the factorial of a number n.
+* The base case is when n is 0, which returns 1.
+* For all other values of n, it recursively calls itself with n-1 and multiplies the result by n.
+* The time complexity of this algorithm is O(n), where n is the input number.
+* The space complexity is O(1), as we only need to store the current and previous factorials.
 
 ## Example Output From Base Model
 ```python
